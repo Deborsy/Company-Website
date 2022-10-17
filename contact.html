@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Page</title>
+    <style>
+        body{
+            background-color: white;
+            font-family: "Comic Sans MS", sans-serif;
+            margin: 0;
+        }
+        ul{
+            display: inline-block;
+        }
+
+        header{
+            background: white url("../img/image1.jpg") scroll no-repeat bottom;
+            padding: 10px;
+            color: white;
+            background-size: cover;
+            text-align: center;
+        }
+        footer{
+            background-color: grey;
+            padding: 5px;
+            color: black;
+            background-size: cover;
+            text-align: center;
+        }
+        footer ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        footer ul li{
+            float: left;
+        }
+        footer ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        /*------ Main Navigation------*/
+        nav{
+            height: 65px;
+            padding-bottom: 10px;
+            background-color: lightgray;
+            overflow: hidden;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li{
+            float: left;
+            padding: 0 20px;
+
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 25px;
+            display: inline-block;
+            height: 30px;
+        }
+        nav ul li a:hover {
+            background-color: slategrey;
+            color: whitesmoke;
+            transition: all 0.5s;
+        }
+        nav ul li a.active{
+            background-color: gray;
+        }
+        .dropdown_list {
+            background-color: dimgray;
+            position: absolute;
+            display: none; /* To hide the dropdown content*/
+        }
+        /* For hover effect*/
+        .dropdown:hover .dropdown_list{
+            display: block;
+            transition: 1s;
+        }
+        .dropdown_list a{
+             display: block;
+        }
+        section{
+            font-family: "Comic Sans MS", sans-serif;
+            background-color: grey;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        article{
+            background-color: lightgrey;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!---Main Header------>
+    <header>
+        <h1>Whales' Store</h1>
+        <p>The best place to shop!</p>
+    </header>
+<!-----Main Navigation--->
+<nav>
+    <ul>
+        <li>
+            <a href="index.html"> Home</a>
+        </li>
+        <li class="dropdown">
+            <a href="#">Categories <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown_list">
+                <a href="#">Footwears</a>
+                <a href="#">Hoodies</a>
+                <a href="#">Underwears</a>
+                <a href="#">Native Wears</a>
+                <a href="#">Suits</a>
+            </div>
+        </li>
+        <li>
+            <a href="#">About Us</a>
+        </li>
+        <li>
+            <a href="#" class="active">Contact Us</a>
+        </li>
+        
+        
+    </ul>
+</nav>
+<section>
+    <h1>CONTACT US</h1>
+    <article>
+        <h3>Cricket</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+    <article>
+        <h3>Football</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+    <article>
+        <h3>Calculation</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+    <article>
+        <h3>Dances</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+</section>
+
+<!----- Main Footer ----->
+<footer>
+    <h3>Copyright &copy; 2022 Whales' Store</h3>
+    <small>All Rights Reserved</small><br>
+    <small>Developed & Maintained Shobayo Benjamin</small><br>
+    <ul>
+        <li><small>Personal Info:</small></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><a href="">Company's email</a></li>
+    </ul>
+</footer>
+</body>
+</html>

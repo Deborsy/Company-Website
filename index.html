@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+    <style>
+        body{
+            background-color: white;
+            font-family: "Comic Sans MS", sans-serif;
+            margin: 0;
+        }
+        ul{
+            display: inline-block;
+        }
+
+        header{
+            background: white url("../img/image1.jpg") scroll no-repeat bottom;
+            opacity: 0.8;
+            filter: alpha(opacity=40);
+            padding: 10px;
+            color: white;
+            background-size: cover;
+            text-align: center;
+        }
+        footer{
+            background-color: grey;
+            padding: 5px;
+            color: black;
+            background-size: cover;
+            text-align: center;
+        }
+        footer ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        footer ul li{
+            float: left;
+        }
+        /*------ Main Navigation------*/
+        nav{
+            height: 65px;
+            padding-bottom: 10px;
+            background-color: lightgray;
+            overflow: hidden;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li{
+            float: left;
+            padding: 0 15px;
+
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 25px;
+            display: inline-block;
+            height: 30px;
+        }
+        nav ul li a:hover {
+            background-color: slategrey;
+            color: whitesmoke;
+            transition: all 0.5s;
+        }
+        nav ul li a.active{
+            background-color: gray;
+        }
+        .dropdown_list {
+            background-color: dimgray;
+            position: absolute;
+            display: none; /* To hide the dropdown content*/
+        }
+        /* For hover effect*/
+        .dropdown:hover .dropdown_list{
+            display: block;
+            transition: 1s;
+        }
+        .dropdown_list a{
+             display: block;
+        }
+        .image-div{
+                border: 2px solid black;
+                width: 300px;
+                border-radius: 15px;
+                padding: 5px;
+                float: left;
+                margin: 5px;
+                text-align: center; 
+        }
+        .image-div:hover {
+                transition: all 0.4s;
+                box-shadow: 0 0 15px black;
+        }
+        .zoom{
+                width: 300px;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 15px;
+        }
+        .zoom img{
+                max-width: 100%;
+                max-height: 100%; 
+                border-radius: 15px;
+                transition: all 1s;
+                cursor: pointer;
+}
+        .zoom:hover img{
+                transform: scale(1.2, 1.2);
+                box-shadow: 0 0 15px black;
+        }
+        .desc{
+                padding: 10px;
+        }
+        input[type='submit'] {
+            font-size: 15px;
+            outline: none;
+            border: none;
+            border-radius: 50%;
+            height: 45px;
+            padding: 10px;
+            cursor: pointer;
+            font-family: "Comic Sans MS", sans-serif;
+            background-color: blue;
+        }
+        input[type='submit']:hover{
+            transition: all 0.5s;
+            background-color: lightblue;
+        }
+
+        .see{
+            position: relative;
+            top: 930px;
+            left: -70px;
+        }
+        .see a {
+            text-decoration: none;
+            color: black;
+            font-size: 10px;
+        }
+        .see a:hover{
+            color: slategray;
+        }
+        .pagin ul.pagination li {display: inline;}
+
+        .pagin ul.pagination li a {
+            cursor: pointer;
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px; /* 0 is for top and bottom. Feel free to remove it */
+        }
+        ul.pagination li a.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        .pagin ul.pagination li a:hover{
+            background-color: lightgreen;
+            color: white;
+            transition: all 0.4s;
+        }
+        input[type='text']{
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            top: -43px;
+            left: 900px;
+        }
+        input[type='text']:focus{
+            background-color: lightsteelblue;
+            color: black;
+        }
+        button{
+            outline: none;
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            top: -43px;
+            left: 879px;
+            height: px;
+            background-color: gray;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: dimgray;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!---Main Header------>
+    <header>
+        <h1>Whales' Store</h1>
+        <p>The best place to shop!</p>
+    </header>
+<!-----Main Navigation--->
+<nav>
+    <ul>
+        <li>
+            <a class="active" href="#"> Home</a>
+        </li>
+        <li class="dropdown">
+            <a href="#">Categories <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown_list">
+                <a href="#">Footwears</a>
+                <a href="#">Hoodies</a>
+                <a href="#">Underwears</a>
+                <a href="#">Native Wears</a>
+                <a href="#">Suits</a>
+            </div>
+        </li>
+        <li>
+            <a href="#">About Us</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact Us</a>
+        </li>
+        
+    </ul>
+</nav>
+<!------ Main Content---->
+<section>
+    <h1>Exclusive Order</h1>
+
+    <!--- Image content and desc ---->
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image3.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie1<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image7.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie2<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image4.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie3<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image2.jpg">
+        </div>
+        <div class="desc">
+            Name: hoodie4<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image3.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie1<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image7.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie2<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image4.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie3<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image2.jpg">
+        </div>
+        <div class="desc">
+            Name: hoodie4<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image3.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie1<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image7.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie2<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image4.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie3<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image2.jpg">
+        </div>
+        <div class="desc">
+            Name: hoodie4<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div><div class="see"><a href="#">See More</a></div>
+    <h1>Bestselling Products</h1>
+        <!--- Image content and desc ---->
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image3.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie1<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image7.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie2<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image4.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie3<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image2.jpg">
+        </div>
+        <div class="desc">
+            Name: hoodie4<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image3.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie1<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image7.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie2<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image4.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie3<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image2.jpg">
+        </div>
+        <div class="desc">
+            Name: hoodie4<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image3.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie1<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image7.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie2<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image4.jpeg">
+        </div>
+        <div class="desc">
+            Name: hoodie3<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+    <div class="image-div">
+        <div class="zoom">
+            <img src="../img/image2.jpg">
+        </div>
+        <div class="desc">
+            Name: hoodie4<br>
+            Price: $50.5
+            <input type="submit" value="Buy">
+        </div>
+    </div>
+        <div class="pagin">
+        <ul class="pagination">
+            <li><a href="#">«</a></li>
+            <li><a class="active" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">»</a></li>
+        </ul> 
+        </div>
+
+</section>
+
+<!----- Main Footer ----->
+<footer>
+    <h3>Copyright &copy; 2022 Whales' Store</h3>
+    <small>All Rights Reserved</small><br>
+    <small>Developed & Maintained Shobayo Benjamin</small><br>
+    <ul>
+        <li><small>Personal Info:</small></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><a href="">Company's email</a></li>
+    </ul>
+</footer>
+    
+</body>
+</html>
